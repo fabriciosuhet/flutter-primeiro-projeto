@@ -7,6 +7,7 @@ enum PopupMenuPages {
   layout_builder,
   botoes_rotacoes_texto,
   single_child,
+  list_view,
 }
 
 class HomePage extends StatelessWidget {
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
         actions: [
           PopupMenuButton<PopupMenuPages>(
             tooltip: 'Selecione um item',
-            icon: const Icon(Icons.restaurant_menu),
+            icon: const Icon(Icons.menu),
             onSelected: (PopupMenuPages valueSelected) {
               switch (valueSelected) {
                 case PopupMenuPages.container:
@@ -40,6 +41,9 @@ class HomePage extends StatelessWidget {
                   break;
                 case PopupMenuPages.single_child:
                   Navigator.of(context).pushNamed('/scrolls/single_child');
+                  break;
+                case PopupMenuPages.list_view:
+                  Navigator.of(context).pushNamed('/scrolls/list_view');
                   break;
               }
             },
@@ -68,6 +72,10 @@ class HomePage extends StatelessWidget {
                 const PopupMenuItem<PopupMenuPages>(
                   value: PopupMenuPages.single_child,
                   child: Text('Scroll SingleChild'),
+                ),
+                const PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.list_view,
+                  child: Text('List View'),
                 ),
               ];
             },
