@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/container/containerpage.dart';
 import 'package:flutter_primeiro_projeto/pages/home/homepage.dart';
+import 'package:flutter_primeiro_projeto/pages/layout_builder/layout_builder_page.dart';
 import 'package:flutter_primeiro_projeto/pages/media_query/media_query_page.dart';
 import 'package:flutter_primeiro_projeto/pages/rows_columns/rows_columns_page.dart';
 
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/container': (_) => const ContainerPage(),
         '/rows_columns': (_) => const RowsColumnPage(),
         '/media_query': (_) => const MediaQueryPage(),
+        '/layout_builder': (_) => const LayoutBuilderPage(),
       },
     );
   }
