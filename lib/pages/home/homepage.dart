@@ -90,7 +90,41 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Container(),
+      body: Theme(
+        data: Theme.of(context).copyWith(primaryColor: Colors.pink),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Botao X'),
+              ),
+              const ContainerX(),
+              Builder(builder: (context){
+                return Container(
+                  height: 100,
+                  width: 100,
+                  color: Theme.of(context).primaryColor,
+                );
+              })
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ContainerX extends StatelessWidget {
+  const ContainerX({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 100,
+      color: Theme.of(context).primaryColor,
     );
   }
 }

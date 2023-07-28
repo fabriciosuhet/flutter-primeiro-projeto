@@ -29,8 +29,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        appBarTheme: const AppBarTheme(color: Colors.red),
+        primaryColor: Colors.amber,
+        elevatedButtonTheme: const ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStatePropertyAll(Colors.purple),
+          ),
+        ),
+        fontFamily: 'Roboto',
+        hoverColor: Colors.amber,
+
+        useMaterial3: false,
       ),
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
