@@ -10,6 +10,7 @@ import 'package:flutter_primeiro_projeto/pages/media_query/media_query_page.dart
 import 'package:flutter_primeiro_projeto/pages/rows_columns/rows_columns_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/listview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/singlechildscrollview_page.dart';
+import 'package:flutter_primeiro_projeto/pages/snacksbars/snackbar_page.dart';
 
 void main() {
   runApp(
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
         '/scrolls/single_child': (_) => const SingleChildScrollViewPage(),
         '/scrolls/list_view': (_) => const ListViewPage(),
         '/dialogs': (_) => const DialogsPage(),
+        '/snackbars': (_) => const SnackbarPage(),
       },
     );
   }
