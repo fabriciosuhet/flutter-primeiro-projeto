@@ -15,6 +15,8 @@ import 'package:flutter_primeiro_projeto/pages/snacksbars/snackbar_page.dart';
 import 'package:flutter_primeiro_projeto/pages/stack/stack_page.dart';
 import 'package:flutter_primeiro_projeto/pages/stack/stack_page2.dart';
 
+import 'bottom_navigatorbar/bottom_navigator_bar_page.dart';
+
 void main() {
   runApp(
     DevicePreview(
@@ -62,6 +64,7 @@ class MyApp extends StatelessWidget {
         '/cidades': (_) => const CidadesPage(),
         '/stack': (_) => const StackPage(),
         'stack/stack2': (_) => const StackPage2(),
+        '/bottomNavigatorBar': (_) => const BottomNavigatorBarPage(),
       },
     );
   }
